@@ -1,0 +1,15 @@
+<% if @importants.present? %>
+  <% @importants.each do |important| %>
+    <%= link_to important.title, important %>
+  <% end %>
+<% end %>
+<%= link_to '続きを見る', releases_path(kind: 'important') %>
+
+<% if @maintenances.present? %>
+  <% @maintenances.each do |maintenance| %>
+    <%= link_to maintenance.title, maintenance %>
+  <% end %>
+<% end %>
+
+
+<%= link_to '続きを見る', releases_path(kind: 'maintenance') %>
