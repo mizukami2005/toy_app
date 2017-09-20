@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170920114612) do
+ActiveRecord::Schema.define(version: 20170920115233) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170920114612) do
     t.integer  "age"
     t.string   "hiragana_name"
     t.string   "kanjiname"
+    t.boolean  "delete_flag"
   end
 
 end
