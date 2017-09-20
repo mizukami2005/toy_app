@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918110632) do
+ActiveRecord::Schema.define(version: 20170920110044) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170918110632) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.datetime "open_at"
+    t.boolean  "delete_flag"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170918110632) do
     t.integer  "age"
     t.string   "hiragana_name"
     t.string   "kanjiname"
+    t.boolean  "delete_flag"
   end
 
 end
